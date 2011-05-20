@@ -1,4 +1,5 @@
-= My Dotfiles =
+ My Dotfiles 
+=============
 
 This is a repository of the configuration files I use in my day-to-day unix-like environments.
 
