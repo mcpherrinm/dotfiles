@@ -1,0 +1,14 @@
+[ui]
+username = Matthew McPherrin <mimcpher@uwaterloo.ca>
+
+[extensions]
+hgext.bookmarks =
+hgext.convert=
+color =
+pager =
+
+[color]
+mode = ansi
+
+[pager]
+pager = less -FRX
