@@ -1,0 +1,62 @@
+syntax on " syntax highlighting
+set background=dark
+
+" Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+		\| exe "normal g'\"" | endif
+endif
+
+set autoindent
+
+" Vim load indentation rules according to the
+" detected filetype.
+if has("autocmd")
+  filetype indent on
+endif
+
+set splitright		" Set how :vsplit windows are positioned.
+set splitbelow		" Set how :split windows are positioned.
+set showcmd			" Show (partial) command in status line.
+set showmatch		" Show matching brackets.
+
+set ignorecase		" do case insensitive searching 
+set smartcase		" if any capitals, do case sensitive search
+
+set incsearch		" Incremental search
+set hidden			" Hide buffers when they are abandoned
+set mouse=a			" Enable mouse usage (all modes) in terminals
+set ttymouse=xterm2	" This works better inside screen.  It could be troublesome?
+
+set number			" Numbers
+set nowrap			" No Wrap
+set showmode		" show the mode thingy always (insert, replace, visual)
+set ruler			" Shows a ruler lile 32,41-54
+
+set scrolloff=10	" This tries to give you four lines of context
+
+set backspace=indent,start,eol "Make backspace work where I expect it to.
+
+"Integrate with system selection buffer
+set clipboard=unnamed
+
+"Show tabs and trailing spaces as magic characters 
+set list listchars=tab:»·,trail:·,precedes:«,extends:»
+
+set tabstop=4		" This is how wide the tab char is
+set shiftwidth=4	" This is how deep indents are.
+
+:command Q q
+:command W w
+:command Wq wq
+:command WQ wq
+
+
+"highlight OverLength ctermbg=yellow ctermfg=black
+"I ought to use 256 colour terminal to get something saner here
+"highlight OverLength ctermbg=yellow ctermfg=black
+"match OverLength /\%81v.\+/
+
+"Additional stuff:
+"source ~/.vim/*.vim
