@@ -1,12 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
 for i in *; do
-	r="`realpath \"$i\"`"
+	r="`pwd`/$i"
 	p=~/."$i"
-	if [ $r != "`realpath \"$0\"`" ] && [ $r != "`realpath README.markdown`" ] ; then
+	if [ $r != "`pwd`/install.sh" ] && [ $r != "`pwd`/README.markdown" ] ; then
 		if [ -e $p ]; then
-			echo "Exists: $p"
-			#todo: get rid of safely!
+			if [ -L $p ] ; then
+				e=`readlink "$p"`
+				if [ $e != $r ]; then
+					echo "Points elsewhere: $e isnt $r"
+				else
+					echo "Already installed $e"
+				fi
+			else
+				echo "Exists: $p"
+			fi
 		else
 			echo "Installing $p"
 			ln -s $r $p
