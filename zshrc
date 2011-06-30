@@ -1,4 +1,4 @@
-export LANG=en_CA.utf8
+export LANG="`locale -a | grep -i en_CA\\.utf\.\*8`"
 export LC_ALL=$LANG
 export LOCALE=$LANG
 
@@ -24,12 +24,16 @@ zstyle ':completion:*' completer _complete _ignored
 compinit
 
 # Colours
+
 autoload -U colors
-eval "$(dircolors -b)"
-if [[ "$terminfo[colors]" -ge 8 ]]; then
-	colors
+which dircolors > /dev/null
+if [[ $? -eq 0 ]]; then
+	eval "$(dircolors -b)"
+	if [[ "$terminfo[colors]" -ge 8 ]]; then
+		colors
+	fi
+	alias ls='ls --color=auto'
 fi
-alias ls='ls --color=auto'
 
 #pushd
 setopt auto_pushd
