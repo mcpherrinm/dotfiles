@@ -1,0 +1,11 @@
+HashKnownHosts no
+User mimcpher
+
+Host *thewaffleproject.com
+User matt
+
+Host *.mcpherrin.ca
+User matt
+
+Host devio.us
+User mcpherrinm
