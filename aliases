@@ -15,4 +15,7 @@ alias ga='git add'
 alias gs='git status'
 alias gd='git diff'
 alias gc='git commit'
-alias gp='git push'
+#git in:
+alias gi='git pull'
+#git out:
+alias go='git push'

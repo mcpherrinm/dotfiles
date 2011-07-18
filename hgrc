@@ -4,6 +4,7 @@ username = Matthew McPherrin <mimcpher@uwaterloo.ca>
 [extensions]
 hgext.bookmarks =
 hgext.convert=
+hggit =
 color =
 pager =
 
