@@ -100,7 +100,7 @@ ackpath="`which ack 2>/dev/null`"
 ackgreppath="`which ack-grep 2>/dev/null`"
 
 if [ ! -f /$ackpath ] || [ ! -x /$ackpath ]; then
-	if [ -f /$ackgreppath ] && [ -x /$ackgreppath]; then
+	if [ -f /$ackgreppath ] && [ -x /$ackgreppath ]; then
 		alias ack=ack-grep
 	fi
 fi
