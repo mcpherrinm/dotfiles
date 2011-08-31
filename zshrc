@@ -96,6 +96,16 @@ bindkey "\e[F" end-of-line
 # completion in the middle of a line
 bindkey '^i' expand-or-complete-prefix
 
+ackpath="`which ack 2>/dev/null`"
+ackgreppath="`which ack-grep 2>/dev/null`"
+
+if [ ! -f /$ackpath ] || [ ! -x /$ackpath ]; then
+	if [ -f /$ackgreppath ] && [ -x /$ackgreppath]; then
+		alias ack=ack-grep
+	fi
+fi
+
+
 # Devin's extract files
 xtr () {
     local ARCHIVE

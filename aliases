@@ -8,7 +8,6 @@ alias cpu='ssh -tX mimcpher@screen.student.cs.uwaterloo.ca'
 alias csc='ssh mimcpher@taurine.csclub.uwaterloo.ca -tX'
 alias srd='screen -RDD'
 alias proxy='ssh mimcpher@taurine.csclub.uwaterloo.ca -D8080 -f -N '
-alias ack='ack-grep'
 alias music='ssh strombola.csclub.uwaterloo.ca -t ncmpcpp'
 
 alias ga='git add'
