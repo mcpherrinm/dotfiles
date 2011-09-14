@@ -1,5 +1,5 @@
-URxvt*font: xft:Bitstream Vera Sans Mono:size=10
-URxvt*boldFont: xft:Bitstream Vera Sans Mono:size=10:style=Bold
+#URxvt*font: xft:Bitstream Vera Sans Mono:size=10
+#URxvt*boldFont: xft:Bitstream Vera Sans Mono:size=10:style=Bold
 URxvt*scrollBar:false
 Xft.dpi: 96
 Xcursor.theme: Vanilla-DMZ
@@ -19,7 +19,7 @@ urxvt*cursorColor2:	#000000
 urxvt*cursorBlink:	false
 urxvt*inheritPixmap:	true
 urxvt*termName:		rxvt-unicode
-urxvt*shading:        5
+urxvt*shading:       10
 urxvt*saveLines:	1000
 urxvt*scrollTtyOutput:	false
 urxvt*scrollTtyKeypress:	true
