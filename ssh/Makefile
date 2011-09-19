@@ -1,7 +1,7 @@
 .PHONY=all
 all: authorized_keys known_hosts
 
-authorized_keys: *_id_rsa.pub
+authorized_keys: id_rsa.pub.*.local
 	cat $^ > authorized_keys
 
 CSCF_known_hosts: CSCF_known_hosts_url
