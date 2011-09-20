@@ -68,7 +68,7 @@ if [ -f "$HOME/.aliases" ]; then
 fi
 
 #I should check here if this dir is good
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/local/bin:$PATH
 
 # key bindings found online somewhere
 bindkey "\e[1~" beginning-of-line
