@@ -11,6 +11,7 @@ SAVEHIST=1000
 setopt hist_ignore_all_dups
 setopt appendhistory autocd extendedglob
 setopt hist_reduce_blanks # remove extra spaces hist commands
+setopt extended_history # adds timestamps to history
 
 unsetopt beep
 #vi mode
