@@ -6,9 +6,16 @@ hgext.bookmarks =
 hgext.convert=
 color =
 pager =
+mq =
 
 [color]
 mode = ansi
 
 [pager]
 pager = less -FRX
+
+[hooks]
+# Prevent "hg pull" if MQ patches are applied.
+prechangegroup.mq-no-pull = ! hg qtop > /dev/null 2>&1
+# Prevent "hg push" if MQ patches are applied.
+preoutgoing.mq-no-push = ! hg qtop > /dev/null 2>&1
