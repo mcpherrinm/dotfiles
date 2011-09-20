@@ -21,3 +21,5 @@ for i in *; do
 		fi
 	fi
 done
+
+make -C ssh
