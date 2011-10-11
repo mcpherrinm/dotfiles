@@ -9,6 +9,8 @@ xmodmap -e 'remove Mod4 = Super_R'
 xmodmap -e 'add Mod4 = Super_R'
 xmodmap -e 'keycode 135 = Multi_key'
 
+unclutter &
+
 urxvt &
 
 xmonad
