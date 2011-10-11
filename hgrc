@@ -12,7 +12,7 @@ mq =
 mode = ansi
 
 [pager]
-pager = less -FRX
+pager = less -FRXi
 
 [hooks]
 # Prevent "hg pull" if MQ patches are applied.
