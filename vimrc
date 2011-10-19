@@ -38,9 +38,6 @@ set clipboard=unnamed
 "Show tabs and trailing spaces as magic characters 
 set list listchars=tab:»·,trail:·,precedes:«,extends:»
 
-set tabstop=8		" This is how wide the tab char is
-set shiftwidth=2	" This is how deep indents are.
-
 :command Q q
 :command W w
 :command Wq wq
