@@ -1,11 +1,17 @@
 HashKnownHosts no
-User mimcpher
 
-Host *thewaffleproject.com
-User matt
+Host *.uwaterloo.ca
+User mimcpher
 
 Host *.mcpherrin.ca
 User matt
 
 Host devio.us
 User mcpherrinm
+
+Host hg.mozilla.org
+User mmcpherrin@mozilla.com
+IdentityFile ~/.ssh/id_rsa_mozilla
+
+Host people
+HostName people.mozilla.org
