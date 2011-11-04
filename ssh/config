@@ -15,3 +15,5 @@ IdentityFile ~/.ssh/id_rsa_mozilla
 
 Host people
 HostName people.mozilla.org
+User mmcpherrin
+IdentityFile ~/.ssh/id_rsa_mozilla
