@@ -164,3 +164,5 @@ mvln(){
    mv $1 $2
    ln -s $2 $1
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

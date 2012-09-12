@@ -1,5 +1,4 @@
 HashKnownHosts no
-User mimcpher
 
 Host *thewaffleproject.com
 User matt
@@ -9,3 +8,13 @@ User matt
 
 Host devio.us
 User mcpherrinm
+
+Host flapjack
+port 202
+Hostname flapjack.hosts.mcpherrin.ca
+User matt
+
+Host syrup
+port 2020
+Hostname flapjack.hosts.mcpherrin.ca
+User matt
