@@ -10,12 +10,6 @@ endif
 
 set autoindent
 
-" Vim load indentation rules according to the
-" detected filetype.
-if has("autocmd")
-  filetype indent on
-endif
-
 set splitright		" Set how :vsplit windows are positioned.
 set splitbelow		" Set how :split windows are positioned.
 set showcmd			" Show (partial) command in status line.
@@ -44,8 +38,9 @@ set clipboard=unnamed
 "Show tabs and trailing spaces as magic characters 
 set list listchars=tab:»·,trail:·,precedes:«,extends:»
 
-set tabstop=4		" This is how wide the tab char is
-set shiftwidth=4	" This is how deep indents are.
+set tabstop=2		" This is how wide the tab char is
+set shiftwidth=2	" This is how deep indents are.
+set expandtab
 
 :command Q q
 :command W w

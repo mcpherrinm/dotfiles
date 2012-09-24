@@ -1,5 +1,5 @@
-#URxvt*font: xft:Bitstream Vera Sans Mono:size=10
-#URxvt*boldFont: xft:Bitstream Vera Sans Mono:size=10:style=Bold
+URxvt*font: xft:Bitstream Vera Sans Mono:size=10
+URxvt*boldFont: xft:Bitstream Vera Sans Mono:size=10:style=Bold
 URxvt*scrollBar:false
 Xft.dpi: 96
 Xcursor.theme: Vanilla-DMZ
@@ -54,7 +54,7 @@ URxvt.urlLauncher:      firefox
 
 ! Xterm
 Xterm*toolBar: false
-XTerm*faceName: monospace:pixelsize=10
+XTerm*faceName: monospace:pixelsize=11
 XTerm*dynamiccolors: true
 xterm*Background: black
 xterm*Foreground: white

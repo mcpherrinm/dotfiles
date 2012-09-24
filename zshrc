@@ -11,6 +11,7 @@ SAVEHIST=1000
 setopt hist_ignore_all_dups
 setopt appendhistory autocd extendedglob
 setopt hist_reduce_blanks # remove extra spaces hist commands
+setopt extended_history # adds timestamps to history
 
 unsetopt beep
 #vi mode
@@ -68,7 +69,7 @@ if [ -f "$HOME/.aliases" ]; then
 fi
 
 #I should check here if this dir is good
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/local/bin:$PATH
 
 # key bindings found online somewhere
 bindkey "\e[1~" beginning-of-line
@@ -163,3 +164,5 @@ mvln(){
    mv $1 $2
    ln -s $2 $1
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -1,0 +1,3 @@
+--type-set=am=.mk,.in
+--type-set=idl=.idl
+--pager=less -FRXi

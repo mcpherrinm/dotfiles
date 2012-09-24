@@ -3,12 +3,29 @@ username = Matthew McPherrin <mimcpher@uwaterloo.ca>
 
 [extensions]
 hgext.bookmarks =
-hgext.convert=
+hgext.convert =
+hgext.record =
 color =
 pager =
+mq =
 
 [color]
 mode = ansi
 
 [pager]
-pager = less -FRX
+pager = less -FRXi
+
+[hooks]
+# Prevent "hg pull" if MQ patches are applied.
+prechangegroup.mq-no-pull = ! hg qtop > /dev/null 2>&1
+# Prevent "hg push" if MQ patches are applied.
+preoutgoing.mq-no-push = ! hg qtop > /dev/null 2>&1
+
+[defaults]
+diff=-U 8 -p
+qdiff=-U 8
+
+[diff]
+git=true
+showfunc=true
+unified=8

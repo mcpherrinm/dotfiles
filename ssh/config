@@ -1,11 +1,24 @@
 HashKnownHosts no
-User mimcpher
 
-Host *thewaffleproject.com
-User matt
+Host *.uwaterloo.ca
+User mimcpher
 
 Host *.mcpherrin.ca
 User matt
 
 Host devio.us
 User mcpherrinm
+
+Host flapjack
+port 202
+Hostname flapjack.hosts.mcpherrin.ca
+User matt
+
+Host syrup
+port 2020
+Hostname flapjack.hosts.mcpherrin.ca
+User matt
+
+Host hg.mozilla.org
+User mmcpherrin@mozilla.com
+IdentityFile ~/.ssh/id_rsa_mozilla
