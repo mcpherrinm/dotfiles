@@ -1,3 +1,5 @@
+#!/bin/sh
+
 xmodmap -e 'remove Lock = Caps_Lock'
 xmodmap -e 'keysym Caps_Lock = Control_L'
 xmodmap -e 'add Control = Control_L'
@@ -9,14 +11,10 @@ xmodmap -e 'keycode 135 = Multi_key'
 
 unclutter &
 
-urxvt &
-urxvt &
-
 export PATH=$HOME/bin:$HOME/local/bin:$PATH
 
 echo $PATH > ~/test
 echo $SHELL >> ~/test
-
 
 diff -q ~/.xmonad/compiled-on /etc/issue.net
 if [ $? -ne 0 ]; then
