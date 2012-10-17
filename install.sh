@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SRC="`dirname $0`"
+SRC="`readlink -f $(dirname $0)`"
 DEST=$HOME
 
 for r in $SRC/*; do
@@ -10,16 +10,16 @@ for r in $SRC/*; do
 			if [ -L $p ] ; then
 				e=`readlink "$p"`
 				if [ $e -ef $r ]; then
-					echo "Already installed $e"
+					echo "#Already installed $e"
 				else
-					echo "Points elsewhere: $e isnt $r"
+					echo "#Points elsewhere: $e isnt $r"
 				fi
 			else
-				echo "Exists: $p"
+				echo "#Exists: $p"
 			fi
 		else
-			echo "Installing $p"
-			ln -s $r $p
+			echo "#Installing $p"
+			echo ln -s $r $p
 		fi
 	fi
 done
