@@ -97,6 +97,10 @@ bindkey "\e[F" end-of-line
 # completion in the middle of a line
 bindkey '^i' expand-or-complete-prefix
 
+#disable ctrl-s freezing terminal
+stty -ixon
+#if this is desired, just use stty ixany and unfreeze with ctrl-q
+
 ackpath="`which ack 2>/dev/null`"
 ackgreppath="`which ack-grep 2>/dev/null`"
 
