@@ -55,3 +55,5 @@ set expandtab
 
 "Additional stuff:
 "source ~/.vim/*.vim
+
+au FileType make setl noexpandtab tabstop=4
