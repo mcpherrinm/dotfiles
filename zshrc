@@ -6,8 +6,8 @@ if [[ -f $HOME/.zshrc_local ]]; then
 	source $HOME/.zshrc_local
 fi
 HISTFILE=~/.histfile
-HISTSIZE=1050
-SAVEHIST=1000
+HISTSIZE=105000
+SAVEHIST=100000
 setopt hist_ignore_all_dups
 setopt appendhistory autocd extendedglob
 setopt hist_reduce_blanks # remove extra spaces hist commands
