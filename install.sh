@@ -5,11 +5,11 @@ DEST=$HOME
 
 for r in $SRC/*; do
 	p=$DEST/."`basename $r`"
-	if [ $r != "$SRC/install.sh" ] && [ $r != "$SRC/README.markdown" ] ; then
-		if [ -e $p ]; then
-			if [ -L $p ] ; then
+	if [ "$r" != "$SRC/install.sh" ] && [ "$r" != "$SRC/README.markdown" ] ; then
+		if [ -e "$p" ]; then
+			if [ -L "$p" ] ; then
 				e=`readlink "$p"`
-				if [ $e -ef $r ]; then
+				if [ "$e" -ef "$r" ]; then
 					echo "#Already installed $e"
 				else
 					echo "#Points elsewhere: $e isnt $r"
