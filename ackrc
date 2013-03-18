@@ -1,4 +1,5 @@
 --type-set=am=.mk,.in
 --type-set=rust=.rs,.rc
+--type-set=racket=.rkt
 --type-set=idl=.idl
 --pager=less -FRXi
