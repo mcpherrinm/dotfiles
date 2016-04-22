@@ -1,4 +1,4 @@
-syntax on " syntax highlighting
+syntax on
 set background=dark
 
 " Vim jump to the last position when
@@ -20,8 +20,6 @@ set smartcase		" if any capitals, do case sensitive search
 
 set incsearch		" Incremental search
 set hidden			" Hide buffers when they are abandoned
-set mouse=a			" Enable mouse usage (all modes) in terminals
-set ttymouse=xterm2	" This works better inside screen.  It could be troublesome?
 
 set number			" Numbers
 set nowrap			" No Wrap
@@ -32,11 +30,8 @@ set scrolloff=10	" This tries to give you four lines of context
 
 set backspace=indent,start,eol "Make backspace work where I expect it to.
 
-"Integrate with system selection buffer
-set clipboard=unnamed
-
 "Show tabs and trailing spaces as magic characters 
-set list listchars=tab:»·,trail:·,precedes:«,extends:»
+set list listchars=tab:Â»Â·,trail:Â·,precedes:Â«,extends:Â»
 
 set tabstop=2		" This is how wide the tab char is
 set shiftwidth=2	" This is how deep indents are.
@@ -46,14 +41,5 @@ set expandtab
 :command W w
 :command Wq wq
 :command WQ wq
-
-
-"highlight OverLength ctermbg=yellow ctermfg=black
-"I ought to use 256 colour terminal to get something saner here
-"highlight OverLength ctermbg=yellow ctermfg=black
-"match OverLength /\%81v.\+/
-
-"Additional stuff:
-"source ~/.vim/*.vim
 
 au FileType make setl noexpandtab tabstop=4
