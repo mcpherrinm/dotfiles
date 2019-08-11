@@ -3,16 +3,6 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias lh='ls -lh'
-alias cls='clear; ls'
-alias cpu='ssh -tX mimcpher@screen.student.cs.uwaterloo.ca'
-
-alias ga='git add'
-alias gs='git status'
-alias gd='git diff'
-alias gc='git commit'
-#git in:
-alias gi='git pull'
-#git out:
-alias go='git push'
-
-alias mb='time sh -c "cd ~MC; make -f client.mk build"'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'

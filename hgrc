@@ -1,5 +1,5 @@
 [ui]
-username = Matthew McPherrin <mimcpher@uwaterloo.ca>
+username = Matthew McPherrin <git@mcpherrin.ca>
 
 [extensions]
 hgext.bookmarks =
