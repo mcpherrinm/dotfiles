@@ -1,14 +1,16 @@
 #!/bin/bash
 
-SRC="`readlink -f $(dirname $0)`"
-DEST=$HOME
+scriptdir=$(dirname "$0")
+SRC=$(readlink -f "$scriptdir")
+DEST="$HOME"
 
-for r in $SRC/*; do
-	p=$DEST/."`basename $r`"
+for r in "$SRC"/*; do
+	srcfile=$(basename "$r")
+	p="$DEST/.$srcfile"
 	if [ "$r" != "$SRC/install.sh" ] && [ "$r" != "$SRC/README.markdown" ] ; then
 		if [ -e "$p" ]; then
 			if [ -L "$p" ] ; then
-				e=`readlink "$p"`
+				e=$(readlink "$p")
 				if [ "$e" -ef "$r" ]; then
 					echo "#Already installed $e"
 				else
@@ -19,9 +21,7 @@ for r in $SRC/*; do
 			fi
 		else
 			echo "#Installing $p"
-			echo ln -s $r $p
+			echo ln -s "$r" "$p"
 		fi
 	fi
 done
-
-make -C ssh
