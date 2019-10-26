@@ -41,5 +41,8 @@ set expandtab
 :command W w
 :command Wq wq
 :command WQ wq
+:command WQa wqa
+:command Wqa wqa
+:command WQA wqa
 
 au FileType make setl noexpandtab tabstop=4
