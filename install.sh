@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 scriptdir=$(dirname "$0")
 SRC=$(readlink -f "$scriptdir")
 DEST="$HOME"
@@ -21,7 +23,7 @@ for r in "$SRC"/*; do
 			fi
 		else
 			echo "#Installing $p"
-			echo ln -s "$r" "$p"
+			ln -s "$r" "$p"
 		fi
 	fi
 done
