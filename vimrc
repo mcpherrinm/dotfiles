@@ -30,8 +30,8 @@ set scrolloff=10	" This tries to give you four lines of context
 
 set backspace=indent,start,eol "Make backspace work where I expect it to.
 
-"Show tabs and trailing spaces as magic characters 
-set list listchars=tab:»·,trail:·,precedes:«,extends:»
+"Show trailing spaces
+set list listchars=trail:·,precedes:«,extends:»
 
 set tabstop=2		" This is how wide the tab char is
 set shiftwidth=2	" This is how deep indents are.
