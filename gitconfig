@@ -1,3 +1,8 @@
 [user]
-	email = git@mcpherrin.ca
 	name = Matthew McPherrin
+	email = git@mcpherrin.ca
+[core]
+	excludesFile = ~/.gitignore
+	editor = vim
+[push]
+	autoSetupRemote = true
